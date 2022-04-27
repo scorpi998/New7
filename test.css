@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Comic Neue', cursive;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 3em;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+}
+.container {
+    margin: 15px;
+    background-color: #808080;
+    border: 2px solid black;
+    width: 33%;
+}
+
+.container-btn {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#p1 {
+    font-size: 21px;
+    padding: 6px 20px;
+
+    display: flex;
+    align-items: center;
+
+}
+#unit1, #unit2, #unit3 {
+    font-size: 24px;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+    border: 2px solid black;
+    float: right;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#unit1 {
+    background-color: pink;
+}
+
+#unit2 {
+    background-color: red;
+    color: #fff;
+}
+
+#unit3 {
+    background-color: yellow;
+}
+
+/* adaptive */
+@media (min-width: 1024) {
+    .container {
+        max-width: 992px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .container:last-child {
+        width: 69%;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        display: block;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .container:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* adaptive */
